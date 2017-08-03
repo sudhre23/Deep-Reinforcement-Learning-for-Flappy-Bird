@@ -135,6 +135,6 @@ def initModel(mode):
 
 if __name__ == "__main__":
 	mode = 'Train'
-	if len(sys.argv) >= 1:
-		mode = sys.argv[1]
+	#if len(sys.argv) >= 1:
+	#	mode = sys.argv[1]
 	initModel(mode)
