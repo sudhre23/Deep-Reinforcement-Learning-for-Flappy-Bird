@@ -1,3 +1,6 @@
+# Deep Reinforcement Learning for Flappy Bird
+
+
 This implementation explores Deep-Q-Learning with the core idea taken from the nature paper titled "Human-level control through deep reinforcement learning"
 link : http://www.nature.com/nature/journal/v518/n7540/full/nature14236.html?foxtrotcallback=true
 
