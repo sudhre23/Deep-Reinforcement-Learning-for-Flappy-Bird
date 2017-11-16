@@ -23,7 +23,7 @@ from skimage import transform,exposure
 from time import gmtime, strftime
 
 discount_factor = 0.99
-ep = 0.1
+ep = 0.05
 batch_size = 32
 rows,cols = 84,84
 stack = 4
@@ -42,6 +42,7 @@ def getModel(mode):
 	model = Model(inputs , output)
 	adam = Adam(lr=0.0025)
 	if mode == 'Run':
+		print "loading v1....."
 		model.load_weights("weights-v1.h5")
 	model.compile(loss='mse',optimizer=adam)
 	return model
@@ -114,12 +115,12 @@ def trainModel(predict_model,actual_model,mode):
 def initModel(mode):
 	predict_model = getModel(mode)
 	actual_model = getModel(mode)
-	actual_model.set_weights(predict_model.get_weights())
+	#actual_model.set_weights(predict_model.get_weights())
 	print predict_model.summary()
 	trainModel(predict_model,actual_model,mode)
 
 if __name__ == "__main__":
-	mode = 'Train'
 	if len(sys.argv) >= 1:
 		mode = sys.argv[1]
+	print mode
 	initModel(mode)
