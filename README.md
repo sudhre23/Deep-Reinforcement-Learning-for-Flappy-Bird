@@ -21,8 +21,10 @@ link : https://www.intelnervana.com/demystifying-deep-reinforcement-learning/
 
 python (filename.py)
 
-1. The DQN.pycan be used in run mode and train mode. Use -Train or -Run to pass as arguements from the command line. 
+1. The DQN.pycan be used in run mode and train mode. Use Train or Run to pass as arguements from the command line. 
+
 
 1. All implementations in training mode give random actions to the flappy bird for the first 3000 iterations in order to populate the experience replay memory, beyond which training starts. 
 
-I am in the process for writing a blog on further details of the implementation. The details of the implementation will be up on this page as soon as the site is up. 
+
+Example command for running : python DQN.py Run

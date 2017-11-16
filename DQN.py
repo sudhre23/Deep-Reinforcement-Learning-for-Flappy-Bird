@@ -43,7 +43,7 @@ def getModel(mode):
 	adam = Adam(lr=0.0025)
 	if mode == 'Run':
 		print "loading v1....."
-		model.load_weights("weights-v1.h5")
+		model.load_weights("weights/weights-v1.h5")
 	model.compile(loss='mse',optimizer=adam)
 	return model
 
